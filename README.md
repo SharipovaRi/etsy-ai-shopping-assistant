@@ -7,7 +7,7 @@
 The Etsy AI Shopping Decision Assistant is deployed as a live web application using Railway.
 
 **Live Website:**  
-etsy-ai-shopping-assistant-production.up.railway.app
+https://etsy-ai-shopping-assistant-production.up.railway.app/
 
 The deployed version can be opened directly in a web browser. No local installation or API key is required to test the live demo.
 
