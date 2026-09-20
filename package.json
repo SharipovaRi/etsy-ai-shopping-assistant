@@ -1,0 +1,18 @@
+{
+  "name": "etsy-ai-shopping-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI shopping decision assistant using synthetic Etsy-style listings and the Google Gemini API.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@google/genai": "^1.0.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}

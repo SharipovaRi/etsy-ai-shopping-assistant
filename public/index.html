@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Etsy AI Shopping Decision Assistant
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body>
+
+
+<header class="topbar">
+
+  <div class="brand">
+
+    <span class="brand-dot"></span>
+
+    <span>
+      Etsy AI Shopping Assistant
+    </span>
+
+  </div>
+
+  <span class="top-note">
+    AI-assisted product discovery
+  </span>
+
+</header>
+
+
+
+<main>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <p class="eyebrow">
+      AI SHOPPING ASSISTANT
+    </p>
+
+
+    <h1>
+
+      Find a gift that feels
+
+      <em>
+        made for them.
+      </em>
+
+    </h1>
+
+
+    <p class="hero-copy">
+
+      Describe who you're shopping for,
+      your budget, and what they love.
+
+      The assistant interprets your request
+      and compares products to find
+      the strongest matches.
+
+    </p>
+
+
+    <div class="benefits">
+
+      <span>
+        Personalized matches
+      </span>
+
+      <span>
+        Budget-aware
+      </span>
+
+      <span>
+        AI comparison
+      </span>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- SEARCH -->
+
+  <section
+    class="panel"
+    id="searchPanel"
+  >
+
+
+    <div class="section-heading">
+
+      <span class="section-number">
+        01
+      </span>
+
+
+      <div>
+
+        <p class="eyebrow small">
+          YOUR REQUEST
+        </p>
+
+        <h2>
+          Who are you shopping for?
+        </h2>
+
+      </div>
+
+    </div>
+
+
+
+    <form id="giftForm">
+
+
+      <label for="request">
+
+        Describe the recipient,
+        occasion, budget, and
+        preferences.
+
+      </label>
+
+
+      <textarea
+        id="request"
+        rows="5"
+        placeholder="Example: I need a personalized birthday gift for my mom under $50. She likes silver minimalist jewelry."
+      ></textarea>
+
+
+
+      <div class="examples">
+
+
+        <button
+          type="button"
+          class="example-chip"
+          data-example="I need a personalized birthday gift for my mom under $50. She likes silver minimalist jewelry."
+        >
+
+          Mom · jewelry · $50
+
+        </button>
+
+
+
+        <button
+          type="button"
+          class="example-chip"
+          data-example="I need a housewarming gift for my sister under $60. She loves cooking and personalized items."
+        >
+
+          Sister · cooking · $60
+
+        </button>
+
+
+
+        <button
+          type="button"
+          class="example-chip"
+          data-example="I need a gift for my friend who loves home decor and minimalist designs. My budget is $40."
+        >
+
+          Friend · home decor · $40
+
+        </button>
+
+
+      </div>
+
+
+
+      <p
+        class="error"
+        id="errorMessage"
+      ></p>
+
+
+
+      <button
+        class="primary-button"
+        id="submitButton"
+        type="submit"
+      >
+
+        Find gift matches →
+
+      </button>
+
+
+    </form>
+
+  </section>
+
+
+
+  <!-- LOADING -->
+
+  <section
+    class="panel loading-panel hidden"
+    id="loadingPanel"
+  >
+
+    <div class="loader"></div>
+
+    <p class="eyebrow small">
+      AI ANALYSIS
+    </p>
+
+    <h2>
+      Finding your best matches...
+    </h2>
+
+    <p>
+
+      Understanding your request,
+      finding relevant products,
+      and comparing the strongest matches.
+
+    </p>
+
+  </section>
+
+
+
+  <!-- CLARIFICATION -->
+
+  <section
+    class="panel clarification-panel hidden"
+    id="clarificationPanel"
+  >
+
+    <p class="eyebrow small">
+      ONE QUICK QUESTION
+    </p>
+
+    <h2>
+      Tell me a little more.
+    </h2>
+
+    <p id="clarifyingQuestion"></p>
+
+    <button
+      class="secondary-button"
+      id="clarifyButton"
+    >
+      Update my request
+    </button>
+
+  </section>
+
+
+
+  <!-- RESULTS -->
+
+  <section
+    class="results hidden"
+    id="resultsSection"
+  >
+
+
+    <div class="results-heading">
+
+
+      <div>
+
+        <p class="eyebrow small">
+          02 · RECOMMENDATIONS
+        </p>
+
+        <h2>
+          Gifts selected for you
+        </h2>
+
+        <p class="muted">
+
+          Recommendations are selected
+          based on your preferences,
+          budget, and shopping needs.
+
+        </p>
+
+      </div>
+
+
+      <button
+        class="text-button"
+        id="startOverButton"
+      >
+        Refine search
+      </button>
+
+
+    </div>
+
+
+
+    <!-- UNDERSTOOD SHOPPING CRITERIA -->
+
+    <div class="criteria-card">
+
+      <p class="eyebrow small">
+        WHAT WE UNDERSTOOD
+      </p>
+
+      <div
+        class="criteria-grid"
+        id="criteriaGrid"
+      ></div>
+
+    </div>
+
+
+
+    <!-- AI PRODUCT RECOMMENDATIONS -->
+
+    <div
+      class="recommendation-grid"
+      id="recommendationGrid"
+    ></div>
+
+
+  </section>
+
+
+</main>
+
+
+
+<footer>
+
+  Etsy AI Shopping Decision Assistant
+
+</footer>
+
+
+<script src="app.js"></script>
+
+
+</body>
+
+</html>
